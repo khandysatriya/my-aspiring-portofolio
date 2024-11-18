@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Landing Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }          
+            
+            body {
+                font-family: arial, sans-serif;
+                line-height: 1.6;
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+            }
+
+            header {
+                background-color: #333;
+                color: #fff;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            header ul {
+                list-style: none;
+                display: flex;
+            }
+
+            header ul li {
+                margin: 0 10px;
+            }
+
+            header ul li a {
+                color:#fff;
+                text-decoration: none;
+            }
+
+            .hero {
+                text-align: center;
+                padding: 50px 20px;
+                background: linear-gradient(to right, #6a11cb, #2575fc);
+                color:#fff;
+            }
+
+            .hero h2 {
+                font-size: 36px;
+                margin-bottom: 10px;
+            }
+
+            .hero .btn {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: #fff;
+                color: #333;
+                text-decoration: none;
+                border-radius: 5px;
+            }
+
+            #services {
+                padding: 50x 20px;
+                background: #f4f4f4;
+                text-align: center;
+            }
+
+            #services h2 {
+                margin-bottom: 20px;
+            }
+
+            .service-container {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            .service {
+                background: #fff;
+                padding: 20px;
+                margin: 10px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                flex: 1 1 300px;
+                max-width: 300px;               
+            }
+
+            footer {
+                text-align: center;
+                padding: 10px 20px;
+                background: #333;
+                color: #fff;
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .service-container {
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <h1>My Website</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contanct">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+            <section id="home" class="hero">
+                <h2>Welcome to My Website</h2>
+                <p>Your journey to a better web experience starts here</p>
+                <a href="#services" class="btn">Explore Services</a>
+            </section>
+
+            <section id="services">
+                <h2>Our Services</h2>
+                <div class="service-container">
+                    <div class="service">
+                        <h3>Web Design</h3>
+                        <p>Create beautiful, user-friendly websites.</p>
+                    </div>              
+                    <div class="service">
+                        <h3>Development</h3>
+                        <p>Build fast and responsive web applications.</p>
+                    </div>
+                    <div class="service">
+                        <h3>SEO</h3>
+                        <p>Optimize your website to rank higher on search engines.</p>
+                    </div>
+                </div>    
+            </section>
+
+        <footer>
+            <p>&copy; 2024 My Website. All rights reserved</p>
+        </footer>
+    </body>  
+
+</html>

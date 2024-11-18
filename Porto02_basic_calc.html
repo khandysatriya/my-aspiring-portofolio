@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic Calculator</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            body {
+                font-family: arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f4f4f4; 
+            }
+
+            .calculator {
+                background: #fff;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                width: 300px;
+            }
+
+            .calculator h1 {
+                margin-bottom: 20px;
+            }
+
+            #result {
+                width: 100%;
+                height: 40px;
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+                text-align: right;
+                padding: 5x;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background: #f9f9f9f9;
+            }
+
+            .button {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+
+            button {
+                height: 40px;
+                font-size: 1.2rem;
+                border: none;
+                border-radius: 5px;
+                background-color: #007bff;
+                color: white;
+                curson: pointer;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="calculator">
+            <h1>Basic Calculator</h1>
+            <input type="text" id="result" readonly>
+            <div class="button">
+                <button onclick="clearResult()">C</button>
+                <button onclick="appendValue('1')">1</button>
+                <button onclick="appendValue('2')">2</button>
+                <button onclick="appendValue('3')">3</button>
+                <button onclick="appendValue('4')">4</button>
+                <button onclick="appendValue('5')">5</button>
+                <button onclick="appendValue('6')">6</button>
+                <button onclick="appendValue('7')">7</button>
+                <button onclick="appendValue('8')">8</button>
+                <button onclick="appendValue('9')">9</button>
+                <button onclick="appendValue('*')">*</button>
+                <button onclick="appendValue('0')">0</button>
+                <button onclick="appendValue('.')">.</button>
+                <button onclick="calculateResult()">=</button>
+                <button onclick="appendValue('/')">/</button>
+            </div>
+        </div> 
+        <script>
+            let result = '';
+
+            function appendValue(Value) {
+                result += value;
+                document.getElementById('result').value = result;
+            }
+
+            function clearResult() {
+                result = '';
+                document.getElementById('result').value = '';
+            }
+
+            function calculateResult() {
+                try {
+                    result = eval(result);
+                    document.getElementById('result').value = result;
+                } catch (error) {
+                    alert('Invalid calculation');
+                }
+            }
+        </script>   
+    </body>
+
+</html>    
